@@ -1,4 +1,4 @@
-
+#part 2
 with open("data.txt") as file:
     data = file.read().strip().split("\n")
 
@@ -25,6 +25,7 @@ for line in data:
     total += red * blue * green 
     
 print(total)
+
 
 
 
