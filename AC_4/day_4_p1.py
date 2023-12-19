@@ -1,16 +1,36 @@
+
 total = 0
 
 with open("data.txt") as file:
-    for x in file:
-        x = x.split(":")[1].strip()
-        winning_num, my_num = x.split("|")
-        winning_num = list(map(int,winning_num.split()))
-        my_num = list(map(int, my_num.split()))
-       
-        score = sum(num in winning_num for num in my_num)
+    for line in file:
+        line = line.split(":")[1].strip() 
+        winning_num, my_num = line.split(" | ")
+        winning_num = set(winning_num.split())
+        my_num = set(my_num.split())
+    
+        score = len(my_num & winning_num)
         if score > 0:
             total += 2 **(score-1)
-print(total)
+    
+    print(total)
+
+
+
+
+
+
+
+# with open("data.txt") as file:
+#     for x in file:
+#         x = x.split(":")[1].strip()
+#         winning_num, my_num = x.split("|")
+#         winning_num = list(map(int,winning_num.split()))
+#         my_num = list(map(int, my_num.split()))
+       
+#         score = sum(num in winning_num for num in my_num)
+#         if score > 0:
+#             total += 2 **(score-1)
+# print(total)
 
 
 
