@@ -3,7 +3,7 @@ with open("input_ex.txt") as file:
 
 
 lines = [lines.split(',') for lines in data]
-# print(lines)
+print(lines)
 data_with_ranges = []
 
 # Converting string pairs into range of numbers
