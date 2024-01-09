@@ -1,4 +1,4 @@
-with open("input.txt") as file:
+with open("input_ex.txt") as file:
     lines = file.read().split("\n")
 
  
